@@ -1,0 +1,35 @@
+//
+//  IRiding-Prefix.pch
+//  IRiding
+//
+//  Created by qianfeng01 on 15-6-11.
+//  Copyright (c) 2015年 刘丽丽. All rights reserved.
+//
+
+#ifndef IRiding_IRiding_Prefix_pch
+#define IRiding_IRiding_Prefix_pch
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Define.h"
+
+
+
+//#define __UpLine__   //上线的时候打开
+
+#ifndef __UpLine__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+
+#endif
+
+#endif
